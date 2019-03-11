@@ -31,6 +31,6 @@ app.listen('3001',()=> {
     //     console.log(result)
     // })//随机数
     //定时任务
-    scheduleProject.createCode();
+    // scheduleProject.createCode();
     console.log('正在监听'+ 3001)
 });
