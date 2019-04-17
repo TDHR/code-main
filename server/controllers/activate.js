@@ -86,7 +86,7 @@ exports.signMessage = async function (ctx) {
 //给产生的新地址打一个qro
 exports.sendQro = async function (ctx) {
     let address = ctx.request.body.address;
-    let txData = await rpcMethod.sendToAddress(address,'100006');
+    let txData = await rpcMethod.sendToAddress(address,'100006:1');
     let myAddress = await rpcMethod.getAddr();//获取项目地址
 
     ctx.body = {
