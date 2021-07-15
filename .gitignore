@@ -7,6 +7,7 @@ logs
 .env
 .c9
 *.orig
+.idea
 locales/en.js
 locales/zh.js
 public/dist
