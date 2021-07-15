@@ -48,8 +48,8 @@ exports.index = async (ctx)=> {
 //通过地址查询应当打多少个币出去
 const queryProductMessage = function (productAddress) {
     return new Promise((resolve,reject) => {
-        let queryProductMessageSql = `SELECT assetId,reward FROM  code_product  WHERE proAddress='${productAddress}'`;
-        p.query(queryProductMessageSql,function (error, result, fields) {
+        let queryProductMessageSql = `SELECT assetId,reward FROM  code_product  WHERE proAddress=?`;
+        p.query(queryProductMessageSql,[productAddress],function (error, result, fields) {
             if(error){
                 let queryMessage = {
                     status:false,
